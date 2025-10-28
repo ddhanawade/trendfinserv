@@ -1,0 +1,274 @@
+<div class="stock-broking-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+          <span>NSE & BSE Authorized Partner</span>
+        </div>
+        <h1 class="hero-title">{{ activeSection === 'stock-broking' ? 'Stock Broking Services' : activeSection === 'equity' ? 'Equity Trading' : activeSection === 'ipo' ? 'IPO Investments' : activeSection === 'derivatives' ? 'Derivatives Trading' : 'Commodities Trading' }}</h1>
+        <p class="hero-subtitle">Expert guidance and seamless execution for your investment journey</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="content-grid">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <div class="sidebar-header">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+              <h3>Our Services</h3>
+            </div>
+            <nav class="sidebar-nav">
+              <button class="nav-item" (click)="showSection('stock-broking')" [class.active]="activeSection === 'stock-broking'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+                <span>Stock Broking</span>
+              </button>
+              <button class="nav-item" (click)="showSection('equity')" [class.active]="activeSection === 'equity'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                <span>Equity</span>
+              </button>
+              <button class="nav-item" (click)="showSection('ipo')" [class.active]="activeSection === 'ipo'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>IPO</span>
+              </button>
+              <button class="nav-item" (click)="showSection('derivatives')" [class.active]="activeSection === 'derivatives'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+                <span>Derivatives</span>
+              </button>
+              <button class="nav-item" (click)="showSection('commodities')" [class.active]="activeSection === 'commodities'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                <span>Commodities</span>
+              </button>
+            </nav>
+          </div>
+
+          <!-- Contact Card -->
+          <div class="contact-card">
+            <h4>Need Assistance?</h4>
+            <p>Our experts are here to help you</p>
+            <a href="tel:+919920369415" class="contact-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Call Now
+            </a>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+
+        <!-- Stock Broking Section -->
+        <article class="content-card" *ngIf="activeSection === 'stock-broking'">
+          <div class="content-header">
+            <h2>What Is Stock Market?</h2>
+            <p class="lead">The stock market is a financial marketplace where individuals and institutions buy and sell ownership shares of publicly traded companies. It provides a platform for companies to raise capital by issuing shares to the public, and for investors to buy and sell those shares.</p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+              </div>
+              <h3>Publicly Traded Companies</h3>
+              <p>Many companies choose to "go public" by offering shares of their company for sale to the general public. This is typically done through an initial public offering (IPO). Once a company's shares are publicly traded, they can be bought and sold on the stock market.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+              <h3>Stocks and Shares</h3>
+              <p>The terms "stock" and "shares" are often used interchangeably. When you buy a stock or share in a company, you are purchasing a piece of ownership in that company. The more shares you own, the larger your ownership stake in the company.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3>Investors</h3>
+              <p>Individuals, institutions, and even governments can be investors in the stock market. They buy shares for various reasons, including the potential for capital appreciation (increased stock value) and dividend income.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+              </div>
+              <h3>Risk and Rewards</h3>
+              <p>Investing in the stock market comes with inherent risks. Stock prices can be volatile, and there is no guarantee of profit. However, historically, the stock market has provided competitive returns over the long term.</p>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <p>The stock market plays a crucial role in the global economy, as it allows companies to raise funds for growth and expansion while providing individuals and institutions with investment opportunities. It's important to note that investing in the stock market carries risks, and it's advisable for individuals to do their research or consult with financial professionals before making investment decisions.</p>
+          </div>
+        </article>
+
+        <!-- EQUITY Section -->
+        <article class="content-card" *ngIf="activeSection === 'equity'">
+          <div class="content-header">
+            <h2>Equity Trading</h2>
+            <p class="lead">Experience the thrill and potential of equity trading with our financial services firm. As experts in the field, we offer a comprehensive range of equity trading services designed to maximize your returns.</p>
+          </div>
+
+          <div class="benefits-list">
+            <div class="benefit-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Cutting-edge technology for seamless trading</span>
+            </div>
+            <div class="benefit-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>In-depth market analysis and research</span>
+            </div>
+            <div class="benefit-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Dedicated team of professionals</span>
+            </div>
+            <div class="benefit-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Personalized guidance and support</span>
+            </div>
+          </div>
+
+          <p class="highlight-text">Join us for seamless execution, personalized guidance, and a track record of delivering exceptional results. Unlock the power of equity trading and take your investments to new heights with us.</p>
+        </article>
+
+        <!-- IPO Section -->
+        <article class="content-card" *ngIf="activeSection === 'ipo'">
+          <div class="content-header">
+            <h2>Initial Public Offering (IPO)</h2>
+            <p class="lead">An IPO (Initial Public Offering) in India involves the process of a company going public on Indian stock exchanges, such as the Bombay Stock Exchange (BSE) and the National Stock Exchange (NSE).</p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <h3>Company Going Public</h3>
+              <p>An IPO marks the first time that a company's shares are made available to the public for purchase on Indian stock exchanges. Prior to the IPO, the company is privately held.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h3>Regulatory Framework</h3>
+              <p>IPOs in India are regulated by SEBI, which sets the rules and guidelines for companies, investment banks, and other participants involved in the IPO process.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3>Lock-In Period</h3>
+              <p>Insiders are often subject to lock-in agreements that restrict them from selling their shares for a specified period after the IPO to prevent excessive price volatility.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3>Use of Funds</h3>
+              <p>Companies use IPO funds for business expansion, debt reduction, acquisitions, working capital, and capital expenditure.</p>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <p>IPOs provide companies with an opportunity to access capital and increase visibility. For investors, they offer a chance to invest in newly listed companies. However, IPO investments come with risks, and thorough research is essential.</p>
+          </div>
+        </article>
+
+        <!-- DERIVATIVES Section -->
+        <article class="content-card" *ngIf="activeSection === 'derivatives'">
+          <div class="content-header">
+            <h2>Derivatives Trading</h2>
+            <p class="lead">Empower your financial journey with derivative trading, offered exclusively by our trusted financial services firm. Whether you're seeking to protect your investments or seize lucrative opportunities, our comprehensive range of derivative products provides the tools you need.</p>
+          </div>
+
+          <p class="highlight-text">Backed by our expertise and unwavering commitment to your success, we tailor strategies to meet your unique needs and guide you every step of the way. Join us today and experience the transformative potential of derivative trading in achieving your financial goals.</p>
+        </article>
+
+        <!-- COMMODITIES Section -->
+        <article class="content-card" *ngIf="activeSection === 'commodities'">
+          <div class="content-header">
+            <h2>Commodities Trading</h2>
+            <p class="lead">Unleash the potential of global markets with our firm's premier commodities trading services. From precious metals to energy resources and agricultural products, our comprehensive range of commodities enables you to diversify your portfolio and capitalize on market trends.</p>
+          </div>
+
+          <p class="highlight-text">With our advanced trading platform and expert guidance, we empower you to navigate the complexities of commodities trading with confidence. Opt for our financial services firm to unlock new avenues of wealth creation, seize opportunities, and stay ahead in the dynamic world of commodities trading.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>

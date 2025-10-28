@@ -1,0 +1,87 @@
+<div class="insurance-page">
+  <section class="page-header">
+    <div class="container">
+      <h1>{{ activeSection === 'insurance' ? 'INSURANCE' : activeSection === 'health' ? 'HEALTH' : activeSection === 'life' ? 'LIFE' : 'GENERAL' }}</h1>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="content-grid">
+        <div class="image-section">
+          <div class="image-container">
+            <div class="placeholder-image">
+              <span class="icon">🛡️</span>
+              <p>Insurance</p>
+            </div>
+          </div>
+          <div class="info-boxes">
+            <div class="info-box" (click)="showSection('insurance')" [class.active]="activeSection === 'insurance'">Insurance</div>
+            <div class="info-box" (click)="showSection('health')" [class.active]="activeSection === 'health'">HEALTH</div>
+            <div class="info-box" (click)="showSection('life')" [class.active]="activeSection === 'life'">LIFE</div>
+            <div class="info-box" (click)="showSection('general')" [class.active]="activeSection === 'general'">GENERAL</div>
+          </div>
+        </div>
+
+        <!-- Insurance Section -->
+        <div class="text-section" *ngIf="activeSection === 'insurance'">
+          <h2>What Is Insurance?</h2>
+          <p>Insurance is a contractual arrangement between an individual (or entity) and an insurance company, where the individual, known as the policyholder, pays a regular premium in exchange for financial protection and coverage against specified risks. The insurance company provides a safety net to help individuals or businesses manage and mitigate the financial consequences of unexpected or adverse events.</p>
+
+          <h3>Here are some key aspects of insurance:</h3>
+
+          <p><strong>Policy:</strong> An insurance policy is a legal contract that outlines the terms and conditions of coverage. It specifies the types of risks or events that are covered, the premium amount, the coverage limits, and any exclusions or conditions.</p>
+
+          <p><strong>Premium:</strong> The policyholder pays regular premiums to the insurance company. Premiums can be paid monthly, quarterly, annually, or according to the terms of the policy. The cost of the premium is typically based on the level of coverage, the type of insurance, and the insured risk.</p>
+
+          <p><strong>Coverage:</strong> Insurance provides coverage against specific risks or events that may occur, depending on the type of insurance policy. Common types of insurance include health insurance, life insurance, auto insurance, homeowners or renters insurance, and business insurance, among others.</p>
+
+          <p><strong>Claims:</strong> The insurance company is the entity that underwrites and sells insurance policies. It is responsible for paying claims to policyholders when covered events occur.</p>
+
+          <p><strong>Policyholder:</strong> The individual or entity that purchases an insurance policy is the policyholder. They are entitled to receive the benefits and coverage specified in the policy when a covered event occurs.</p>
+
+          <p><strong>Claim:</strong> When a covered event occurs, the policyholder can file a claim with the insurance company to receive the financial benefits or compensation as outlined in the policy.</p>
+
+          <p><strong>Coverage Limits:</strong> Insurance policies often have coverage limits, which represent the maximum amount the insurer will pay for a covered event. Policyholders may need to be aware of these limits when selecting their coverage.</p>
+        </div>
+
+        <!-- HEALTH Section -->
+        <div class="text-section" *ngIf="activeSection === 'health'">
+          <h2>HEALTH</h2>
+
+          <h3>Health</h3>
+
+          <p>Prioritize your health and well-being with our comprehensive health insurance plans. We understand that medical expenses can be a significant burden, which is why our health insurance policies offer extensive coverage for hospitalization, medical treatments, and critical illnesses.</p>
+
+          <p>With our wide network of hospitals and cashless claims facility, you can access quality healthcare without financial worries. Our range of health insurance plans caters to different budgets and needs, ensuring that you find the right coverage for you and your family.</p>
+
+          <p>Trust Trend Financial Services to be your partner in maintaining your health and providing financial security in times of medical emergencies.</p>
+        </div>
+
+        <!-- LIFE Section -->
+        <div class="text-section" *ngIf="activeSection === 'life'">
+          <h2>LIFE</h2>
+
+          <h3>Life</h3>
+
+          <p>Protect your family's financial future with our reliable life insurance policies. Our dedicated team understands the importance of ensuring your loved ones are taken care of, even in your absence. With our customizable plans, you can choose the coverage and benefits that best suit your family's needs.</p>
+
+          <p>From providing financial support for education expenses to covering outstanding debts, our life insurance policies offer peace of mind and security.</p>
+
+          <p>Count on Trend Financial Services to be your trusted partner in safeguarding your family's dreams and aspirations.</p>
+        </div>
+
+        <!-- GENERAL Section -->
+        <div class="text-section" *ngIf="activeSection === 'general'">
+          <h2>GENERAL</h2>
+
+          <h3>General</h3>
+
+          <p>Safeguard your valuable assets against unforeseen risks with our comprehensive general insurance solutions. Our firm offers a range of policies to protect your property, vehicles, and other assets from accidents, theft, natural disasters, and more. We provide prompt claims settlement and personalized service to ensure that your claims experience is smooth and hassle-free.</p>
+
+          <p>Whether it's your home, office, or vehicle, our general insurance coverage gives you the confidence to face unexpected events. Join hands with us for reliable and efficient general insurance that protects what matters most to you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

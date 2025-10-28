@@ -1,0 +1,265 @@
+<div class="other-services-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span>Comprehensive Financial Solutions</span>
+        </div>
+        <h1 class="hero-title">{{ activeSection === 'pms' ? 'Portfolio Management Service' : activeSection === 'bonds' ? 'Bonds & NCD' : 'Loan Services' }}</h1>
+        <p class="hero-subtitle">Expert financial services tailored to your investment needs</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="content-grid">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <div class="sidebar-header">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <h3>Our Services</h3>
+            </div>
+            <nav class="sidebar-nav">
+              <button class="nav-item" (click)="showSection('pms')" [class.active]="activeSection === 'pms'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                <span>Portfolio Management</span>
+              </button>
+              <button class="nav-item" (click)="showSection('bonds')" [class.active]="activeSection === 'bonds'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+                <span>Bonds & NCD</span>
+              </button>
+              <button class="nav-item" (click)="showSection('loans')" [class.active]="activeSection === 'loans'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span>Loans</span>
+              </button>
+            </nav>
+          </div>
+
+          <!-- Contact Card -->
+          <div class="contact-card">
+            <h4>Need Assistance?</h4>
+            <p>Our experts are here to help you</p>
+            <a href="tel:+919920369415" class="contact-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>Call Now</span>
+            </a>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+
+        <!-- PMS Section -->
+        <article class="content-card" *ngIf="activeSection === 'pms'">
+          <div class="content-header">
+            <h2>Portfolio Management Service (PMS)</h2>
+            <p class="lead">PMS is a specialized investment service offered by portfolio managers or professional fund managers to individual investors, high-net-worth individuals (HNIs), and institutions. The primary objective of PMS is to create and manage customized investment portfolios tailored to the specific financial goals and risk profiles of clients.</p>
+          </div>
+
+          <h3 class="section-title">Here are some key features and aspects of Portfolio Management Services (PMS) in India:</h3>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+              </div>
+              <h4>Customized Portfolio</h4>
+              <p>PMS providers create and manage individualized investment portfolios for clients. These portfolios are designed to meet the client's unique investment objectives, risk tolerance, and time horizon.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <h4>Transparency</h4>
+              <p>PMS providers offer regular reporting and transparency regarding the portfolio's performance, holdings, and transactions. Clients can monitor their investments and receive periodic updates.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <h4>Risk Profile Assessment</h4>
+              <p>PMS providers assess the risk profile and investment objectives of clients before creating a portfolio. This helps in constructing a portfolio that aligns with the client's financial goals.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <h4>Asset Allocation</h4>
+              <p>PMS providers use asset allocation strategies to distribute investments among different asset classes, such as equities, fixed income, and cash, based on the client's risk tolerance and objectives.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                  <line x1="1" y1="10" x2="23" y2="10"></line>
+                </svg>
+              </div>
+              <h4>Taxation</h4>
+              <p>The taxation of PMS portfolios in India is subject to applicable tax laws. Capital gains on equity holdings may be subject to different tax rates; gains on other asset classes.</p>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <p>Portfolio Management Services provide an opportunity for investors to benefit from professional management and customization of their investment portfolios. They are particularly suited for investors with significant capital and those who prefer a personalized approach to investing. It's important for investors to carefully consider the track record, fees, and investment strategy of PMS providers and ensure that their chosen provider aligns with their financial goals and risk tolerance.</p>
+          </div>
+        </article>
+
+        <!-- BONDS Section -->
+        <article class="content-card" *ngIf="activeSection === 'bonds'">
+          <div class="content-header">
+            <h2>Bonds & NCD</h2>
+            <p class="lead">Bonds are an important component of India's financial markets and provide a means for these entities to raise capital for various purposes, such as funding government operations, infrastructure projects, or business expansion.</p>
+          </div>
+
+          <h3 class="section-title">Here are some key types of Indian bonds:</h3>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <h4>Corporate Bonds</h4>
+              <p>Indian corporations issue bonds to raise capital for their business activities, including expansion, debt refinancing, or working capital. These bonds vary in terms of credit quality and risk, and they may be rated by credit rating agencies.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h4>Tax-Free Bonds</h4>
+              <p>In the past, the Indian government has issued tax-free bonds, which are exempt from income tax. These bonds are typically used to fund infrastructure projects and offer tax benefits to investors.</p>
+            </div>
+          </div>
+
+          <h3 class="section-title">What is NCD?</h3>
+          <p class="highlight-text">NCD in India stands for "Non-Convertible Debentures." Non-Convertible Debentures are debt instruments issued by corporations and other entities to raise funds. These instruments are referred to as "non-convertible" because they cannot be converted into equity shares of the issuing company at a later date, as is common with some other types of bonds.</p>
+
+          <h3 class="section-title">Here are some key features and aspects of NCDs in India:</h3>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h4>Debt Instrument</h4>
+              <p>NCDs are a form of debt securities, and when an investor buys NCDs, they are essentially lending money to the issuer in exchange for periodic interest payments and the return of the principal amount at maturity.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+              </div>
+              <h4>Interest Rate</h4>
+              <p>NCDs offer a fixed or floating interest rate, which is referred to as the "coupon rate." The coupon rate is typically higher than what is offered by banks on fixed deposits, making NCDs an attractive investment option for income-oriented investors.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- LOANS Section -->
+        <article class="content-card" *ngIf="activeSection === 'loans'">
+          <div class="content-header">
+            <h2>Loan Services</h2>
+            <p class="lead">Loans are financial arrangements in which one party (the lender) provides money or assets to another party (the borrower) with the expectation that the borrower will repay the amount borrowed, usually with interest, over a specified period. Loans can serve various purposes, from personal financing to business expansion.</p>
+          </div>
+
+          <h3 class="section-title">Here are some common types of loans:</h3>
+
+          <div class="info-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <p>Home Loan, also known as a mortgage, is a type of loan specifically designed to help individuals or families purchase a home. Home loans are typically long-term loans with a repayment period that can extend for many years, often up to 30 years.</p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <h4>Fixed-Rate Mortgage</h4>
+              <p>With a fixed-rate mortgage, the interest rate remains constant throughout the life of the loan. This provides predictability in monthly payments.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <h4>Adjustable-Rate Mortgage (ARM)</h4>
+              <p>An ARM has an initial fixed-rate period, typically 5, 7, or 10 years, after which the interest rate can adjust periodically based on market conditions.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                  <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                </svg>
+              </div>
+              <h4>FHA Loans</h4>
+              <p>These are insured by the Federal Housing Administration and often require lower down payments and have more flexible qualification requirements.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>

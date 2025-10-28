@@ -1,0 +1,245 @@
+<div class="mutual-fund-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="23"></line>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+          <span>Professional Investment Management</span>
+        </div>
+        <h1 class="hero-title">{{ activeSection === 'mutual-fund' ? 'Mutual Fund Services' : activeSection === 'equity-schemes' ? 'Equity Schemes' : activeSection === 'debt-schemes' ? 'Debt Schemes' : activeSection === 'hybrid-schemes' ? 'Hybrid Schemes' : 'Solution Oriented Schemes' }}</h1>
+        <p class="hero-subtitle">Diversified investment solutions tailored to your financial goals</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="content-grid">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <div class="sidebar-header">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+              <h3>Fund Categories</h3>
+            </div>
+            <nav class="sidebar-nav">
+              <button class="nav-item" (click)="showSection('mutual-fund')" [class.active]="activeSection === 'mutual-fund'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+                <span>Mutual Fund</span>
+              </button>
+              <button class="nav-item" (click)="showSection('equity-schemes')" [class.active]="activeSection === 'equity-schemes'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                <span>Equity Schemes</span>
+              </button>
+              <button class="nav-item" (click)="showSection('debt-schemes')" [class.active]="activeSection === 'debt-schemes'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>Debt Schemes</span>
+              </button>
+              <button class="nav-item" (click)="showSection('hybrid-schemes')" [class.active]="activeSection === 'hybrid-schemes'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+                <span>Hybrid Schemes</span>
+              </button>
+              <button class="nav-item" (click)="showSection('solution-oriented')" [class.active]="activeSection === 'solution-oriented'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Solution Oriented</span>
+              </button>
+            </nav>
+          </div>
+
+          <!-- Contact Card -->
+          <div class="contact-card">
+            <h4>Need Assistance?</h4>
+            <p>Our experts are here to help you</p>
+            <a href="tel:+919920369415" class="contact-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Call Now
+            </a>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+
+        <!-- Mutual Fund Section -->
+        <article class="content-card" *ngIf="activeSection === 'mutual-fund'">
+          <div class="content-header">
+            <h2>What Is Mutual Fund?</h2>
+            <p class="lead">A mutual fund is a professionally managed investment vehicle that pools money from multiple investors to purchase a diversified portfolio of stocks, bonds, or other securities. Mutual funds are a popular way for individuals to invest in a diversified portfolio with associated securities.</p>
+          </div>
+
+          <h3 class="section-title">Here are some key features and characteristics of mutual funds:</h3>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"></path>
+                </svg>
+              </div>
+              <h4>Diversification</h4>
+              <p>Mutual funds invest in a variety of securities, providing diversification. When you invest in a mutual fund, your money is combined with that of other investors, and the fund manager uses these pooled resources to buy a wide variety of assets. This diversification helps spread risk because your investment is not tied to the performance of a single security or a few securities.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\"></path>
+                  <circle cx="9" cy="7" r="4\"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87\"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75\"></path>
+                </svg>
+              </div>
+              <h4>Professional Management</h4>
+              <p>Mutual funds are managed by professional fund managers who make investment decisions on behalf of the fund's shareholders. These managers have expertise in selecting and managing the fund's investments according to its stated objectives.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path>
+                </svg>
+              </div>
+              <h4>Liquidity</h4>
+              <p>Mutual fund shares are typically bought and sold at the net asset value (NAV) at the end of each trading day. This provides investors with liquidity, meaning they can easily buy or sell shares, making it a flexible investment choice.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2\"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9\"></line>
+                  <line x1="9" y1="21" x2="9" y2="9\"></line>
+                </svg>
+              </div>
+              <h4>Variety of Funds</h4>
+              <p>There is a wide range of mutual fund types available, each with its own investment focus. Common types include equity (stock) funds, bond funds, money market funds, index funds, sector funds, and more. Each type has its own risk and return characteristics.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23\"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path>
+                </svg>
+              </div>
+              <h4>Minimum Investment</h4>
+              <p>Mutual funds often have a minimum initial investment requirement, which can vary from fund to fund. Some funds offer lower minimums, while others may require a larger initial investment.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10\"></circle>
+                  <polyline points="12 6 12 12 16 14\"></polyline>
+                </svg>
+              </div>
+              <h4>Expense Ratio</h4>
+              <p>Mutual funds charge fees and expenses to cover the costs of management, administration, and marketing. The expense ratio is expressed as a percentage of the fund's assets and can impact the overall returns for investors. Lower-cost funds are generally more attractive.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18\"></polyline>
+                  <polyline points="17 6 23 6 23 12\"></polyline>
+                </svg>
+              </div>
+              <h4>Net Asset Value (NAV)</h4>
+              <p>The NAV represents the per-share value or the mutual fund's assets minus its liabilities. It is calculated at the end of each trading day and is used to determine the price at which investors can buy or redeem shares.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z\"></path>
+                  <line x1="7" y1="7" x2="7.01" y2="7\"></line>
+                </svg>
+              </div>
+              <h4>Dividends and Capital Gains</h4>
+              <p>Mutual funds may distribute dividends and capital gains to their shareholders. These distributions can be reinvested or taken as cash.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path>
+                </svg>
+              </div>
+              <h4>Tax Efficiency</h4>
+              <p>Mutual funds can be tax-efficient investment options. Some funds are structured to minimize tax liabilities for investors.</p>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10\"></circle>
+              <line x1="12" y1="16" x2="12" y2="12\"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8\"></line>
+            </svg>
+            <p>Investors often choose mutual funds to gain exposure to a diversified portfolio of assets without the need for significant capital or extensive investment expertise. It's essential to research and understand a fund's investment objectives, past performance, and fees before investing in it to align with your financial goals and risk tolerance.</p>
+          </div>
+        </article>
+
+        <!-- EQUITY SCHEMES Section -->
+        <article class="content-card" *ngIf="activeSection === 'equity-schemes'">
+          <div class="content-header">
+            <h2>Equity Schemes</h2>
+            <p class="lead">Equity schemes are mutual funds that primarily invest in stocks, offering potential capital growth. Managed by professionals, they provide investors with exposure to the stock market's growth potential. Consider your risk tolerance and financial goals before investing.</p>
+          </div>
+        </article>
+
+        <!-- DEBT SCHEMES Section -->
+        <article class="content-card" *ngIf="activeSection === 'debt-schemes'">
+          <div class="content-header">
+            <h2>Debt Schemes</h2>
+            <p class="lead">Debt schemes are mutual funds that primarily invest in fixed-income securities like government bonds, corporate bonds, and money market instruments. These schemes aim to provide stable returns and are considered less risky compared to equity schemes. Debt funds are suitable for investors looking for regular income and capital preservation.</p>
+          </div>
+        </article>
+
+        <!-- HYBRID SCHEMES Section -->
+        <article class="content-card" *ngIf="activeSection === 'hybrid-schemes'">
+          <div class="content-header">
+            <h2>Hybrid Schemes</h2>
+            <p class="lead">Hybrid schemes, also known as balanced funds, are mutual funds that invest in a mix of both equity and debt instruments. They offer a balanced portfolio, providing potential for capital growth from equities and stability from debt securities.</p>
+          </div>
+
+          <p class="highlight-text">Hybrid schemes are suitable for investors seeking moderate risk and returns with a diversification benefit.</p>
+        </article>
+
+        <!-- SOLUTION ORIENTED SCHEMES Section -->
+        <article class="content-card" *ngIf="activeSection === 'solution-oriented'">
+          <div class="content-header">
+            <h2>Solution Oriented Schemes</h2>
+            <p class="lead">Solution-oriented schemes are a category of mutual funds in India designed to meet specific financial goals like retirement or education. These schemes have a lock-in period, typically of five years, and are meant to offer solutions tailored to investors' needs.</p>
+          </div>
+
+          <p class="highlight-text">They provide a disciplined approach to achieve long-term objectives and offer potential tax benefits under Section 80C of the Income Tax Act.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>

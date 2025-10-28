@@ -1,0 +1,483 @@
+.home-page {
+  min-height: 100vh;
+  background: #fff;
+}
+
+// Hero Section
+.hero-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(255, 102, 0, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 133, 51, 0.3) 0%, transparent 50%),
+      linear-gradient(135deg, #ff6600 0%, #ff8533 100%);
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.3;
+    }
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    animation: fadeInUp 1s ease;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn 1s ease 0.2s both;
+
+    .badge-icon {
+      font-size: 1.2rem;
+      animation: pulse 2s ease infinite;
+    }
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    animation: fadeInUp 1s ease 0.3s both;
+
+    .highlight {
+      background: linear-gradient(135deg, #fff 0%, #ffe0cc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    animation: fadeInUp 1s ease 0.4s both;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    animation: fadeInUp 1s ease 0.5s both;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease 0.6s both;
+
+    .stat-item {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 25px 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.25);
+      }
+
+      .stat-number {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 5px;
+      }
+
+      .stat-label {
+        font-size: 0.875rem;
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+// Quote Section
+.quote-section {
+  background: #f8f9fa;
+  padding: 80px 0;
+
+  .quote-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 60px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    text-align: center;
+
+    .quote-icon {
+      font-size: 6rem;
+      color: #ff6600;
+      opacity: 0.1;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+
+    .quote {
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+    }
+
+    .author {
+      font-size: 1.125rem;
+      color: #ff6600;
+      font-weight: 600;
+    }
+  }
+}
+
+.offerings {
+  padding: 60px 0;
+  background: #fff;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff6600;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+  }
+
+  .offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .offering-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .offering-header {
+      background: #ff6600;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .offering-image {
+      height: 250px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .placeholder-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        
+        .icon {
+          font-size: 5rem;
+          margin-bottom: 15px;
+        }
+
+        p {
+          font-size: 1.1rem;
+          color: #fff;
+          font-weight: 600;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      &.stock-broking {
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      }
+
+      &.mutual-fund {
+        background: linear-gradient(135deg, #15803d 0%, #22c55e 100%);
+      }
+
+      &.insurance {
+        background: linear-gradient(135deg, #4c1d95 0%, #8b5cf6 100%);
+      }
+
+      &.other-investments {
+        background: linear-gradient(135deg, #b45309 0%, #f59e0b 100%);
+      }
+    }
+  }
+}
+
+.about-section {
+  padding: 80px 0;
+  background: #fff;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .image-card {
+      width: 350px;
+      height: 450px;
+      border-radius: 200px;
+      background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(255, 136, 51, 0.2) 100%);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .businessman-silhouette {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, 
+          rgba(255, 102, 0, 0.3) 0%, 
+          rgba(255, 102, 0, 0.5) 50%, 
+          rgba(255, 102, 0, 0.7) 100%);
+
+        .icon {
+          font-size: 12rem;
+          opacity: 0.6;
+          filter: blur(2px);
+        }
+      }
+
+      .overlay-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 40px 30px;
+        z-index: 3;
+
+        p {
+          color: rgba(0, 0, 0, 0.6);
+          font-size: 1.3rem;
+          font-weight: 600;
+          text-align: left;
+          text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+
+          &:nth-child(1) {
+            align-self: flex-start;
+          }
+
+          &:nth-child(2) {
+            align-self: flex-start;
+            margin-left: 20px;
+          }
+
+          &:nth-child(3) {
+            align-self: flex-start;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      // Chart line overlay effect
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 20%;
+        left: 10%;
+        right: 10%;
+        height: 2px;
+        background: linear-gradient(90deg, 
+          transparent 0%, 
+          rgba(255, 255, 255, 0.5) 20%, 
+          rgba(255, 255, 255, 0.8) 50%, 
+          rgba(255, 255, 255, 0.5) 80%, 
+          transparent 100%);
+        z-index: 4;
+      }
+    }
+  }
+
+  .about-content {
+    h2 {
+      font-size: 2.5rem;
+      color: #000;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: #000;
+      text-align: justify;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .quote-section {
+    padding: 40px 0 30px;
+
+    .quote {
+      font-size: 1.2rem;
+    }
+
+    .author {
+      font-size: 1rem;
+    }
+  }
+
+  .offerings {
+    padding: 40px 0;
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .offerings-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+  }
+
+  .about-section {
+    padding: 60px 0;
+
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .about-image {
+      .image-card {
+        width: 280px;
+        height: 360px;
+
+        .businessman-silhouette .icon {
+          font-size: 8rem;
+        }
+
+        .overlay-text {
+          padding: 30px 20px;
+
+          p {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+
+    .about-content {
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

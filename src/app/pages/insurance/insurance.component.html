@@ -1,0 +1,202 @@
+<div class="insurance-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>Comprehensive Protection Plans</span>
+        </div>
+        <h1 class="hero-title">{{ activeSection === 'insurance' ? 'Insurance Services' : activeSection === 'health' ? 'Health Insurance' : activeSection === 'life' ? 'Life Insurance' : 'General Insurance' }}</h1>
+        <p class="hero-subtitle">Secure your future with our comprehensive insurance solutions</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="content-grid">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <div class="sidebar-header">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <h3>Insurance Types</h3>
+            </div>
+            <nav class="sidebar-nav">
+              <button class="nav-item" (click)="showSection('insurance')" [class.active]="activeSection === 'insurance'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>Insurance</span>
+              </button>
+              <button class="nav-item" (click)="showSection('health')" [class.active]="activeSection === 'health'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+                <span>Health</span>
+              </button>
+              <button class="nav-item" (click)="showSection('life')" [class.active]="activeSection === 'life'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                <span>Life</span>
+              </button>
+              <button class="nav-item" (click)="showSection('general')" [class.active]="activeSection === 'general'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span>General</span>
+              </button>
+            </nav>
+          </div>
+
+          <!-- Contact Card -->
+          <div class="contact-card">
+            <h4>Need Assistance?</h4>
+            <p>Our experts are here to help you</p>
+            <a href="tel:+919920369415" class="contact-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Call Now
+            </a>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+
+        <!-- Insurance Section -->
+        <article class="content-card" *ngIf="activeSection === 'insurance'">
+          <div class="content-header">
+            <h2>What Is Insurance?</h2>
+            <p class="lead">Insurance is a contractual arrangement between an individual (or entity) and an insurance company, where the individual, known as the policyholder, pays a regular premium in exchange for financial protection and coverage against specified risks. The insurance company provides a safety net to help individuals or businesses manage and mitigate the financial consequences of unexpected or adverse events.</p>
+          </div>
+
+          <h3 class="section-title">Here are some key aspects of insurance:</h3>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <h4>Policy</h4>
+              <p>An insurance policy is a legal contract that outlines the terms and conditions of coverage. It specifies the types of risks or events that are covered, the premium amount, the coverage limits, and any exclusions or conditions.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h4>Premium</h4>
+              <p>The policyholder pays regular premiums to the insurance company. Premiums can be paid monthly, quarterly, annually, or according to the terms of the policy. The cost of the premium is typically based on the level of coverage, the type of insurance, and the insured risk.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h4>Coverage</h4>
+              <p>Insurance provides coverage against specific risks or events that may occur, depending on the type of insurance policy. Common types of insurance include health insurance, life insurance, auto insurance, homeowners or renters insurance, and business insurance, among others.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <h4>Claims</h4>
+              <p>The insurance company is the entity that underwrites and sells insurance policies. It is responsible for paying claims to policyholders when covered events occur.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <h4>Policyholder</h4>
+              <p>The individual or entity that purchases an insurance policy is the policyholder. They are entitled to receive the benefits and coverage specified in the policy when a covered event occurs.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <h4>Claim</h4>
+              <p>When a covered event occurs, the policyholder can file a claim with the insurance company to receive the financial benefits or compensation as outlined in the policy.</p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <h4>Coverage Limits</h4>
+              <p>Insurance policies often have coverage limits, which represent the maximum amount the insurer will pay for a covered event. Policyholders may need to be aware of these limits when selecting their coverage.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- HEALTH Section -->
+        <article class="content-card" *ngIf="activeSection === 'health'">
+          <div class="content-header">
+            <h2>Health Insurance</h2>
+            <p class="lead">Prioritize your health and well-being with our comprehensive health insurance plans. We understand that medical expenses can be a significant burden, which is why our health insurance policies offer extensive coverage for hospitalization, medical treatments, and critical illnesses.</p>
+          </div>
+
+          <p class="highlight-text">With our wide network of hospitals and cashless claims facility, you can access quality healthcare without financial worries. Our range of health insurance plans caters to different budgets and needs, ensuring that you find the right coverage for you and your family.</p>
+
+          <p class="highlight-text">Trust Trend Financial Services to be your partner in maintaining your health and providing financial security in times of medical emergencies.</p>
+        </article>
+
+        <!-- LIFE Section -->
+        <article class="content-card" *ngIf="activeSection === 'life'">
+          <div class="content-header">
+            <h2>Life Insurance</h2>
+            <p class="lead">Protect your family's financial future with our reliable life insurance policies. Our dedicated team understands the importance of ensuring your loved ones are taken care of, even in your absence. With our customizable plans, you can choose the coverage and benefits that best suit your family's needs.</p>
+          </div>
+
+          <p class="highlight-text">From providing financial support for education expenses to covering outstanding debts, our life insurance policies offer peace of mind and security.</p>
+
+          <p class="highlight-text">Count on Trend Financial Services to be your trusted partner in safeguarding your family's dreams and aspirations.</p>
+        </article>
+
+        <!-- GENERAL Section -->
+        <article class="content-card" *ngIf="activeSection === 'general'">
+          <div class="content-header">
+            <h2>General Insurance</h2>
+            <p class="lead">Safeguard your valuable assets against unforeseen risks with our comprehensive general insurance solutions. Our firm offers a range of policies to protect your property, vehicles, and other assets from accidents, theft, natural disasters, and more. We provide prompt claims settlement and personalized service to ensure that your claims experience is smooth and hassle-free.</p>
+          </div>
+
+          <p class="highlight-text">Whether it's your home, office, or vehicle, our general insurance coverage gives you the confidence to face unexpected events. Join hands with us for reliable and efficient general insurance that protects what matters most to you.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
